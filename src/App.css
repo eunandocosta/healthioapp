@@ -1,38 +1,251 @@
 .App {
   text-align: center;
+  background-color: rgb(228, 233, 238);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  justify-content: center;
+  align-items: center; 
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
+.container{
+  width: 100%;
   min-height: 100vh;
   display: flex;
+  gap: 5px;
   flex-direction: column;
-  align-items: center;
+  justify-content: start;
+}
+
+.container-limit{
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.loading-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh; 
 }
 
-.App-link {
-  color: #61dafb;
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px; 
+  height: 100px; 
+  border: 8px solid #54C6A8;
+  border-top: 8px solid transparent; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60px;
+  height: 60px; 
+}
+
+.loading-logo img {
+  width: 100%; 
+  height: 100%; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  background-color: #3E9A81;
+  align-self: start;
+}
+
+.nav-logo-container {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding-left: 10px; 
+}
+
+.nav-logo {
+  width:17vh;
+  box-sizing: border-box;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-around;
+  font-size: larger;
+  list-style: none;
+  color: aliceblue;
+}
+
+.menu-itens{
+  font-size: 1.2em;
+}
+
+.announcement{
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.announcement-title{
+  color: aliceblue;
+  max-width: 70%;
+  text-align: center;
+  font-size: 4em;
+}
+
+.login{
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+}
+
+.control-area{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-logo{
+  width: 90%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.text-link{
+  color: #3E9A81;
+}
+
+.text-link:hover{
+  color: #54C6A8;
+  cursor: pointer;
+}
+
+.card_container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+}
+
+.card_input{
+  width: 80%;
+  border-radius: 2px;
+  border-color: rgba(48, 48, 48, 0.479);
+  border: 1px solid;
+  height: 5vh;
+  font-size: 24px;
+}
+
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 2px;
+  border-color: rgba(48, 48, 48, 0.479);
+  border: 1px solid;
+  -webkit-box-shadow: 0px 8px 9px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 8px 9px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 8px 9px -4px rgba(0,0,0,0.75);
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: calc(100vh/8);
+  background-color: aliceblue;
+}
+
+.card_macros{
+  display: flex;
+  gap: 20px;
+}
+
+.card-hover:hover{
+  transform: translateY(-10px);
+}
+
+.macro_name{
+  font-weight: lighter;
+}
+
+.container-dietas{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.criar-dieta{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5vh;
+}
+
+.input-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.form-container{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.aliment-container{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-background{
+  background-color: #3E9A81;
+  padding: 10px;
+  border-radius: 1em;
+}
+
+.list-item {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.list-item:hover {
+  background-color: #54c6a75e; /* Ajuste a cor conforme necessário */
+}
+
+.primary-btn-contained{
+  background-color: #54C6A8;
 }
