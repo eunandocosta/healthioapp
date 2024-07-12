@@ -34,7 +34,7 @@ const SignPage = (props) => {
 
   const handleRegister = () => {
     if (isPasswordMatch) {
-        axios.post('http://localhost:5000/register', { email, password })
+        axios.post('http://localhost:5004/register', { email, password })
             .then((response) => {
                 if (response && response.data) {
                     console.log("Registration successful:", response.data);
@@ -56,7 +56,7 @@ const SignPage = (props) => {
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             userCredential.user.getIdToken().then((idToken) => {
-                axios.post('http://localhost:5000/login', { idToken })
+                axios.post('http://localhost:5004/login', { idToken })
                     .then((response) => {
                         if (response && response.data) {
                             console.log("Login successful");
